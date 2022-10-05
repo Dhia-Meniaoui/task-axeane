@@ -1,0 +1,66 @@
+
+
+<div class="container">
+
+<ng-multiselect-dropdown
+  [placeholder]="'custom placeholder'"
+  [settings]="dropdownSettings"
+  [data]="dropdownList"
+  [(ngModel)]="selectedItems"
+  (onSelect)="onItemSelect($event)"
+  (onDeSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>
+
+
+
+<table class="table">
+  <thead>
+    <tr >
+      <th *ngFor="let item of dropdownList"><p *ngIf="item.display">{{item.item_text}}</p></th>     
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of datatest">
+      <td *ngIf="dropdownList[0].display">{{item.idMouvement}}</td>
+      <td *ngIf="dropdownList[1].display">{{item.numerotationMvt}}</td>
+      <td *ngIf="dropdownList[2].display">{{item.dateMouvement}}</td>
+      <td *ngIf="dropdownList[3].display">{{item.etatMouvement}}</td>
+      <td *ngIf="dropdownList[4].display">{{item.originMouvement}}</td>
+      <td *ngIf="dropdownList[5].display">{{item.descriptionMouvement}}</td>
+      <td *ngIf="dropdownList[6].display">{{item.quantite}}</td>
+      <td *ngIf="dropdownList[7].display">{{item.prixUnitaire}}</td>
+      <td *ngIf="dropdownList[8].display">{{item.montantTotal}}</td>
+      <td *ngIf="dropdownList[9].display">{{item.cump}}</td>
+      <td *ngIf="dropdownList[10].display">{{item.nomTier}}</td>
+      <td *ngIf="dropdownList[11].display">{{item.prenomTier}}</td>
+      <td *ngIf="dropdownList[12].display">{{item.raisonSocialTier}}</td>
+      <td *ngIf="dropdownList[13].display">{{item.tierId}}</td>
+      <td *ngIf="dropdownList[14].display">{{item.codeDepot}}</td>
+      <td *ngIf="dropdownList[15].display">{{item.idDepot}}</td>
+      <td *ngIf="dropdownList[16].display">{{item.idMarqueProduit}}</td>
+      <td *ngIf="dropdownList[17].display">{{item.codeMarqueProduit}}</td>
+      <td *ngIf="dropdownList[18].display">{{item.libelleMarqueProduit}}</td>
+      <td *ngIf="dropdownList[19].display">{{item.libelleProduit}}</td>
+      <td *ngIf="dropdownList[20].display">{{item.codeProduit}}</td>
+      <td *ngIf="dropdownList[21].display">{{item.idProduit}}</td>
+      <td *ngIf="dropdownList[22].display">{{item.codeCategorie}}</td>
+      <td *ngIf="dropdownList[23].display">{{item.libelleCategorie}}</td>
+      <td *ngIf="dropdownList[24].display">{{item.methodeValorisationStock}}</td>
+      <td *ngIf="dropdownList[25].display">{{item.idCategorie}}</td>
+      <td *ngIf="dropdownList[26].display">{{item.typeDocumentOrigin}}</td>
+      <td *ngIf="dropdownList[27].display">{{item.idDocument}}</td>
+      <td *ngIf="dropdownList[28].display">{{item.numerotationDocument}}</td>
+      <td *ngIf="dropdownList[29].display">{{item.statusDocument}}</td>
+      <td *ngIf="dropdownList[30].display">{{item.natureMouvement}}</td>
+
+    </tr>
+  </tbody>
+
+</table>
+
+
+
+</div>
